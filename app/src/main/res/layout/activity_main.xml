@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:id="@+id/activity_main"
     android:layout_width="match_parent"
@@ -10,11 +11,33 @@
     android:paddingTop="@dimen/activity_vertical_margin"
     tools:context="com.syncplay.MainActivity">
 
-    <TextView
-        android:text="Hello World!"
+    <ImageButton
+        android:layout_height="80dp"
+        app:srcCompat="@android:drawable/ic_media_play"
+        android:layout_centerVertical="true"
+        android:layout_centerHorizontal="true"
+        android:id="@+id/playButton"
+        android:layout_width="80dp"
+        android:scaleType="fitCenter"
+        android:adjustViewBounds="false"
+        style="@style/Widget.AppCompat.ImageButton"
+        android:contentDescription="@string/play" />
+
+    <ImageButton
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:id="@+id/textView"
+        app:srcCompat="@android:drawable/stat_sys_upload"
         android:layout_centerVertical="true"
-        android:layout_centerHorizontal="true" />
+        android:layout_toLeftOf="@+id/playButton"
+        android:layout_toStartOf="@+id/playButton"
+        android:id="@+id/selectFileButton" />
+
+    <ImageButton
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:srcCompat="@android:drawable/stat_notify_more"
+        android:layout_alignTop="@+id/selectFileButton"
+        android:layout_toRightOf="@+id/playButton"
+        android:layout_toEndOf="@+id/playButton"
+        android:id="@+id/devicesButton" />
 </RelativeLayout>

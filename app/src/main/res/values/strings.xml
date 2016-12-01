@@ -1,3 +1,5 @@
 <resources>
     <string name="app_name">SyncPlay</string>
+    <string name="play">Play</string>
+    <string name="addDevice">Add</string>
 </resources>

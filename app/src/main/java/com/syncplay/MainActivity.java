@@ -59,7 +59,11 @@ public class MainActivity extends AppCompatActivity {
             case GET_CONTENT_ID:
                 if (resultCode == RESULT_OK) {
                     Uri file = data.getData();
-                    DataManager.addFile(new AudioSource(file.getPath()));
+                    try {
+                        DataManager.addFile(new AudioSource(getContentResolver().openInputStream(file), file.getLastPathSegment()));
+                    } catch (FileNotFoundException e) {
+                        e.printStackTrace();
+                    }
                 }
                 break;
         }

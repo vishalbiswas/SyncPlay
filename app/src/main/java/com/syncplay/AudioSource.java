@@ -12,13 +12,15 @@ import android.content.Context;
  */
 
 class AudioSource {
-    String path;
+    String fileName;
+    InputStream fileStream;
 
-    AudioSource(String path) {
-        this.path = path;
+    AudioSource(InputStream fileStream, String fileName) {
+        this.fileStream = fileStream;
+        this.fileName = fileName;
     }
 
     InputStream getStream() throws FileNotFoundException {
-        return new FileInputStream(new File(path));
+        return this.fileStream;
     }
 }

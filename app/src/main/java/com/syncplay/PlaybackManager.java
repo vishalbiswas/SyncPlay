@@ -12,7 +12,7 @@ class PlaybackManager {
     static void play() {
         for (PlaybackDevice device:
                 DeviceManager.devices) {
-            if (device.getState() == PlaybackState.READY) {
+            if (device.getState() != PlaybackState.ERROR && device.getState() != PlaybackState.DROP) {
                 device.play();
             }
         }

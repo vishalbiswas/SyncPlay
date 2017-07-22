@@ -1,10 +1,6 @@
-package com.syncplay;
+package com.syncplay
 
-/**
- * Created by vishal on 10/14/16.
- */
-
-enum PlaybackState {
+internal enum class PlaybackState {
     PLAY,
     STOP,
     PAUSE,

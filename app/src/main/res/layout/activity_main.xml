@@ -14,6 +14,7 @@
     <ImageButton
         android:layout_height="80dp"
         app:srcCompat="@android:drawable/ic_media_play"
+        android:background="@null"
         android:layout_centerVertical="true"
         android:layout_centerHorizontal="true"
         android:id="@+id/playButton"
